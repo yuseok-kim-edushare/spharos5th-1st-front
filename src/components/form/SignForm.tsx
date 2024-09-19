@@ -17,7 +17,8 @@ const SignInForm = () => {
       redirect: true,
       callbackUrl: "/",
     });
-    // console.log(values);
+    console.log(result);
+    console.log(values);
   };
 
   return (
