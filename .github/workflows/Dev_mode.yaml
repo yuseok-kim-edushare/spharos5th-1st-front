@@ -1,0 +1,31 @@
+name: Sync Dev
+
+on:
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout forked repository
+      uses: actions/checkout@v4
+      with:
+        ref: main
+        
+    - name: Setup Git
+      run: |
+        git config --global user.name = 'yuseok-kim-edushare'
+        git config --global user.email = 'yuseok.kim@edushare.kr'
+      
+    - name: Add upstream remote
+      run: git remote add upstream https://github.com/Spharos-Academy-5-Team-of-YuSeokKim/front_starbucks_clone.git
+    - name: Fetch upstream
+      run: git fetch upstream
+
+    - name: Merge upstream changes
+      run: git merge upstream/dev --allow-unrelated-histories -X theirs
+
+    - name: Push cahnges
+      run: 
+        git push origin main --force
