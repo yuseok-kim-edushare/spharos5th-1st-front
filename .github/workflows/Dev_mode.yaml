@@ -15,8 +15,8 @@ jobs:
         
     - name: Setup Git
       run: |
-        git config --global user.name = 'yuseok-kim-edushare'
-        git config --global user.email = 'yuseok.kim@edushare.kr'
+        git config --global user.name='yuseok-kim-edushare'
+        git config --global user.email='yuseok.kim@edushare.kr'
       
     - name: Add upstream remote
       run: git remote add upstream https://github.com/Spharos-Academy-5-Team-of-YuSeokKim/front_starbucks_clone.git
