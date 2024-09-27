@@ -2,41 +2,57 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+/* 나눔 고딕 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/* Noto Sans KR */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
 
 body {
   width: 100%;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: 'Noto Sans KR', 'Nanum Gothic', sans-serif;
 }
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+.custom-button {
+  background-color: #006241;
+  color: white;
+  transition: background-color 0.3s;
+  padding: 2rem 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.custom-button-kakao {
+  background-color: #ead417;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.custom-input {
+  border-width: 2px;
+  border-color: #d1d5db;
+  transition: border-color 0.3s;
+  padding: 2rem 1rem;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
-@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap");
+.custom-input:focus {
+  border-color: #006241;
+  outline: none;
+}
 
-body {
-  width: 100%;
-  font-family: "Nanum Gothic", sans-serif;
+.search-input {
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db; /* border and border-input */
+  background-color: #ffffff; /* bg-background */
+  padding-left: 0.75rem; /* px-3 */
+  padding-right: 0.75rem; /* px-3 */
+  padding-top: 0.5rem; /* py-2 */
+  padding-bottom: 0.5rem; /* py-2 */
+  font-size: 0.875rem; /* text-sm */
+  outline: none;
+  box-shadow: none;
+  color: #111827;
+}
+
+.search-input:focus {
+  border-color: #006241;
+  outline: none;
 }
 
 /* 스크롤바 숨기기 */

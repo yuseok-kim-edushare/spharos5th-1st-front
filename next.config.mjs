@@ -10,7 +10,24 @@ const nextConfig = {
         protocol: "https",
         hostname: "sitem.ssgcdn.com",
       },
+      { protocol: "https", hostname: "image.istarbucks.co.kr" },
+      {
+        protocol: "https",
+        hostname: "image.istarbucks.co.kr",
+      },
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+      },
+      { protocol: "https", hostname: "image.istarbucks.co.kr" },
+      {
+        protocol: "https",
+        hostname: "img.icons8.com",
+      },
     ],
+  },
+  env: {
+    BASE_API_URL: process.env.BASE_API_URL,
   },
 };
 

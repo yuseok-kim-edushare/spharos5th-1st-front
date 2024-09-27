@@ -1,57 +1,36 @@
-import React from "react";
-
-const data = {
-  addressalias: "집",
-  name: "홍길동",
-  zipcode: 12345,
-  address: "~~~~~~~~",
-  deepaddress: "~~~~~~",
-  tel: "010-0000-0000",
-  note: "문 앞에 놔두세요",
-};
+import { ShippingAddressType } from '@/types/responseType';
+import { Link } from 'lucide-react';
+import React from 'react';
 
 const PayDelivery = () => {
   return (
     <>
-      <h1 className="ml-8 font-bold text-2xl	">결제하기 </h1>
-      <div className=" ml-8 flex flex-col justify-between pt-5">
-        <div className="flex justify-between  py-5">
-          <h4 className=" font-bold text-xl">배송 정보</h4>
-          <div>
-            <a
-              href=""
-              className="mx-5 rounded-full border-2	 items-center text-gray-500 "
-            >
-              변경
-            </a>
-          </div>
-        </div>
-
-        <div className=" mb-5">
-          <div className="flex justify-between">
-            <div>
-              <p>
-                {data.name}({data.addressalias})
-              </p>
-
-              <div>
-                <p>
-                  ({data.zipcode}) {data.address}({data.deepaddress})
-                </p>
-              </div>
-
-              <div>
-                <p>{data.tel}</p>
-              </div>
-
-              <div>
-                <p>{data.note}</p>
-              </div>
+      <section>
+        <div className="ml-8 pb-5 pt-16">
+          <ul className="flex items-center justify-between">
+            <div className="flex items-center justify-center gap-2">
+              {/* <li className="font-bold">{shippingDefaultAddress.name}</li> */}
+              <li className="text-sm font-bold">
+                {/* {`(${shippingDefaultAddress.addressNickname})`} */}
+              </li>
+              <li className="flex items-center justify-center bg-[#deefe9] px-[4px] py-[2px] text-[0.6rem] text-[#33b881]">
+                기본
+              </li>
             </div>
-          </div>
+            <div>
+              <button className="mr-10 rounded-xl border-2 px-1 text-slate-400">
+                변경
+              </button>
+            </div>
+          </ul>
+          {/* <p className="py-2 text-sm">{shippingDefaultAddress.address}</p> */}
+          <ul>
+            {/* <li>{shippingDefaultAddress.phone}</li> */}
+            {/* <li>{shippingDefaultAddress.memo}</li> */}
+          </ul>
         </div>
-      </div>
-      <hr className=" border-border-solid border-t-[1px] z-20 border-t-slate-400" />
+      </section>
+      <hr className="border-border-solid z-20 mx-6 border-t-[1px] border-t-slate-400" />
     </>
   );
 };
