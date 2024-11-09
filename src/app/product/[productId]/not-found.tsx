@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <main className="flex h-[70vh] flex-col items-center justify-center">
       <NoutFound />
-      <p className="text-3xl font-bold">존재하지 않는 상품입니다</p>
+      <p className="text-2xl font-bold">존재하지 않는 상품입니다.</p>
     </main>
   );
 };
